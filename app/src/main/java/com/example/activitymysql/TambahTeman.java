@@ -2,6 +2,7 @@ package com.example.activitymysql;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,7 +29,7 @@ public class TambahTeman extends AppCompatActivity {
     String nm,tlp;
     int success;
 
-    private static String url_insert = "http://127.0.0.1/umyTI/tambahtm.php";
+    private static String url_insert = "http://192.168.1.9/umyTI/tambahtm.php";
     private static final String TAG = TambahTeman.class.getSimpleName();
     private static final String TAG_SUCCES = "success";
 
@@ -45,6 +46,9 @@ public class TambahTeman extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SimpanData();
+                Intent inten = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(inten);
+                finish();
             }
         });
     }

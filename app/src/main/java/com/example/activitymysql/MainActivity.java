@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Teman> temanArrayList = new ArrayList<>();
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static String url_select = "http://127.0.0.1/umyTI/bacateman.php";
+    private static String url_select = "http://192.168.1.9/umyTI/bacateman.php";
     public static final String TAG_ID = "id";
     public static final String TAG_NAMA = "nama";
     public static final String TAG_TELPON = "telpon";
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
+                    adapter.notifyDataSetChanged();
                 }
             }, new Response.ErrorListener(){
                 @Override
